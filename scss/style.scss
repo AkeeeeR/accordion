@@ -1,0 +1,239 @@
+$red: #ec1c24;
+$white: #fff;
+
+body {
+    background-color: #ebebeb !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.container {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.row {
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.header-left {
+    height: 100px;
+    background-color: $white;
+    font-size: 14px !important;
+    color: #adadad;
+    p {
+        padding: 30px 0 0 30px;
+        font-size: 1.05vw;
+        width: 36vw;
+    }
+}
+
+.box-color {
+    background-color: $red;
+    height: 100px;
+}
+
+/* HEADER */
+/* FAQ */ 
+
+.faq {
+    height: auto;
+    background-color: $white;
+    text-align: center;
+    padding: 0 !important;
+}
+
+.faq-header {
+    font-size: 8vw;
+    font-weight: 900;
+    color: #eeeeee;
+    padding-right: 12.3vw;
+}
+
+.faq-header-text {
+    font-size: 2.5vw;
+    z-index: 1;
+    position: absolute;
+    left: 21.4vw;
+    top: 7vw;
+}
+
+.accordion {
+    margin: 0;
+}
+
+.accordion-item {
+    background-color: $white;
+    color: #adadad;
+    cursor: pointer;
+    padding: 5px 18px 5px 17.2vw;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: 0.4s;
+    text-decoration: none;
+    span:nth-child(1) {
+        font-size: 18px;
+        padding-top: 2px;
+    }
+    &:hover {
+        background-color: $red;
+        color: $white;
+        width: 100%;
+        span {
+            color: $white;
+        }
+    }
+    &:hover:after {
+        color: $white;
+    }
+    &:after {
+        content: '\23F7';
+        color: $red;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+}
+
+.active {
+    background-color: #f6f6f6;
+    color: #333333;
+    span {
+        color: $red;
+    }
+    &:after {
+        content: "\23F6";
+        color: #333333;
+    }
+}
+
+.panel {
+    padding: 0 18px 0 17.5vw;
+    text-align: justify;
+    background-color: #f6f6f6 !important;
+    border: none !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p {
+        color: #adadad;
+        padding: 28px;
+        font-size: 14px;
+    }
+    &:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+/* FAQ */
+/* FILES */
+
+.file {
+    background-color: $white;
+    padding: 0 !important;
+}
+
+.file-box {
+    border-radius: 25px 0 0;
+    height: auto;
+    background-color: #000;
+    padding: 30px 0 0 20px;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px !important;
+    p {
+        font-size: 1.8vw;
+        color: $white;
+        margin: 0;
+        &:nth-child(2) {
+            color: #ebebeb;
+        }
+    }
+}
+
+.files {
+    display: table-caption;
+    padding: 25px 0;
+    button {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #393838;
+        color: #ebebeb;
+        cursor: pointer;
+        width: 19vw;
+        text-align: left;
+        outline: none;
+        font-size: 14px;
+        padding: 10px 0;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+
+.far {
+    padding: 0;
+    color: #ccc;
+    float: right;
+    font-size: 20px;
+    &:active, &:hover {
+        color: #ec1c24;
+    }
+}
+
+/* FILES */
+
+@media only screen and (min-width: 1200px) {
+    .header-left p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header-left {
+        text-align: center;
+        p {
+            font-size: 13px;
+            width: 79%;
+            margin: auto;
+            padding: 30px 0;
+        }
+    }
+    .header-box {
+        background-color: $red;
+        height: 100px;
+    }
+    .accordion-item {
+        padding: 5px 13vw;
+    }
+    .faq {
+        text-align: left;
+        padding: 0 0 65px 0 !important;
+    }
+    .faq-header {
+        font-size: 80px;
+        padding-left: 13vw;
+    }
+    .faq-header-text {
+        top: 70px;
+        font-size: 25px;
+    }
+    .panel {
+        padding: 0 13.4vw;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .file-box {
+        padding: 30px 13vw;
+        p {
+            font-size: 18px;
+        }
+    }
+    .files button {
+        width: 74vw;
+    } 
+}
